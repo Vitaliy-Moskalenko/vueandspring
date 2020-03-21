@@ -1,5 +1,4 @@
-p, input { font-family: monospace; }
-p { white-space: pre; }
+[v-cloak] { display:none; }
 
 .main {
 	width:80%;
@@ -9,3 +8,6 @@ p { white-space: pre; }
 	border:0.5px solid #ccc;
 	box-shadow:3px 3px 3px #ccc;
 }
+
+textarea { width:100%; }
+ul { padding:0 15px; }
