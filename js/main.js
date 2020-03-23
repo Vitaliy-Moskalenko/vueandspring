@@ -1,4 +1,7 @@
 import MessageList from './components/MessageList.js';
+import './directives/focus.directive.js';
+import './filters/datetime.filter.js';
+import lifecycleLogger from './mixins/lifecycle-logger.mixin.js';
 
 
 const MESSAGES_LIMIT         = 3;
@@ -7,6 +10,7 @@ const MESSAGES_LENGTH_LIMIT = 50;
 
 let vm = new Vue({
 	el:   '#app',
+	name: 'MessagesApp',
 	data: {		
 		messages:   [],
 		newMessage: ''
@@ -36,5 +40,6 @@ let vm = new Vue({
 	},
 	components: {
 		MessageList
-	}	
+	},
+	mixins: [lifecycleLogger]
 });
